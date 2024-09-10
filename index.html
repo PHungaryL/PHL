@@ -1,38 +1,102 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Békéscsaba RolePlay </title>
-    <link rel="icon" type="image/x-icon" href="kepek/favicon.png">
-</head>
-<body> 
-    <header>
-        <div class="logo-container">
-            <img src="kepek/favicon.png" alt="Logo" class="logo">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wild RolePlay</title>
+    <link rel="stylesheet" href="style.css"
+    ><link rel="icon" type="image/x-icon" href="kepek/logo.png">
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Az Ön adatainak védelme fontos a számunkra! El fogadja a sütiket? <a href="#">Adatvédelmi szabályzatot</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies">Elfogadom</button>
+            <button id="decline-cookies">Elutasítom</button>
         </div>
-        <h1>Üdvözöljük a Békéscsaba RolePlay oldalán!</h1>
-    </header><nav>
-        <button><a href="index.html">Kezdőlap</a></button>
-        <button><a href="rolunk.html">Rólunk</a></button>
-        <button><a href="kapcsolat.html">Kapcsolat</a></button>
-        <button><a href="valaszto.html">Szabályzatok</a></button>
+    </div>
 
-    </nav>
-    <section>
-        <p> 
-            <div class="scroll-container">
-                <img src="kepek/kezdo1.png" alt="Cinque Terre">
-                <img src="kepek/kezdo2.png" alt="Forest">
-                <img src="kepek/kezdo3.png" alt="Northern Lights">
-                <img src="kepek/kezdo4.png" alt="Northern Lights">
-                <img src="kepek/kezdo5.png" alt="Northern Lights">
-              </div>
-        </p>
-    </section>
+    <script>
+        // Cookie kezelő funkció
+        document.getElementById('accept-cookies').onclick = function() {
+            document.cookie = "cookies-accepted=true; path=/; max-age=31536000"; // 1 évig érvényes cookie
+            document.getElementById('cookie-banner').style.display = 'none';
+        };
+
+        document.getElementById('decline-cookies').onclick = function() {
+            document.cookie = "cookies-accepted=false; path=/; max-age=31536000";
+            document.getElementById('cookie-banner').style.display = 'none';
+        };
+
+        // Ellenőrzi, hogy a sütik el lettek-e fogadva
+        window.onload = function() {
+            if (document.cookie.indexOf('cookies-accepted') !== -1) {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Wild RolePlay</h1>
+            <p>Csatlakozz a legjobb MTA szerverekhez!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#rolunk">Rólunk</a></li>
+                <li><a href="#szerverek">Szerver</a></li>
+                <li><a href="#forum">Fórum</a></li>
+                <li><a href="#letoltes">Letöltés</a></li>
+                <li><a href="#kapcsolat">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="rolunk">
+            <h2>Rólunk</h2>
+            <p>
+                Üdvözlünk a <strong>Wild RolePlay</strong> közösségében! Mi egy lelkes, dinamikusan fejlődő MTA RolePLay szerver vagyunk, amely </br>kifejezetten a magyar játékosok számára készült. Célunk, hogy egyedi és izgalmas játékélményt nyújtsunk minden</br> játékosunknak, legyen szó tapasztalt veteránokról vagy újonnan érkezőkről.
+                
+                Szerverünk különlegessége, hogy folyamatosan</br> fejlődik és új funkciókkal gazdagodik. Szeretjük a kreativitást és az innovációt, ezért rendszeresen frissítjük a szervert, hogy</br> mindig valami új és izgalmas várjon rátok.
+                
+                Csapatunk elkötelezett a közösség építése és a barátságos légkör fenntartása mellett. </br>Nálunk fontos a fair play, a csapatszellem és a játékosok visszajelzéseinek figyelembe vétele. Hallgatunk rátok, és folyamatosan</br> igyekszünk a legjobb játékélményt biztosítani, amit egy MTA szerver nyújthat.
+                
+                Ha egy olyan közösséghez szeretnél tartozni, ahol </br>minden nap új kihívások és szórakozási lehetőségek várnak, ne habozz csatlakozni! Nálunk megtalálod a helyed, legyen szó baráti</br> versengésről, szoros együttműködésről vagy egy új történet kibontakoztatásáról.</br>
+                
+                További információkért látogass el fórumunkra, és csatlakozz hozzánk a szerveren! Várunk téged is a <strong>Wild RolePlay</strong> kalandjaiban!</p>
+        </section>
+
+        <section id="szerverek">
+            <h2>Szerver</h2>
+            <p>Fedezd fel az egyik olyan magyar szervert ahol adnak a játékosok szavaira!</p>
+            <ul class="servers-list">
+                <li><strong>Szerver:</strong> Roleplay Világa</li>
+                <p>Jelen pillanatban még 1 szerverünk van amin TEXT alapú RolePLay-t tudsz játszani.</p>
+        </section>
+
+        <section id="forum">
+            <h2>Fórum</h2>
+            <p>Beszélgess más játékosokkal a fórumon, oszd meg tapasztalataidat, taktikáidat vagy csatlakozz a közösséghez!</p>
+        </section>
+
+        <section id="kapcsolat"></section>
+            <h2>Kapcsolat</h2>
+            <p>Csatlakozz még ma Discord szerverünk-hez!</p>
+            <a href="https://discord.gg/Usbwdc7f9C" class="download-button">Csatlakozás</a>
+        </section>
+        <br> <br> <br>
+        <section id="letoltes">
+            <h2>Letöltés</h2>
+            <p>Töltsd le az MTA-t, hogy csatlakozhass a szerverünkhöz </p>
+            <a href="https://multitheftauto.com" class="download-button">Letöltés</a>
+        </section>
+    </main>
+
     <footer>
-        &copy; 2024 Békéscsaba RolePlay
+        <div class="footer-content">
+            <p>&copy; 2024 Wild RolePlay</p>
+        </div>
     </footer>
 </body>
 </html>
